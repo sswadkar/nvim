@@ -5,11 +5,15 @@ return {
     filesystem = {
       bind_to_cwd = true,
       cwd_target = "current",
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+      },
 
       -- reveal current file but don't auto-expand everything
       follow_current_file = {
         enabled = true,
-        leave_dirs_open = false,  -- close dirs you're not in
+        leave_dirs_open = false, -- close dirs you're not in
       },
 
       -- stop it from expanding empty dirs
@@ -20,4 +24,3 @@ return {
     },
   },
 }
-
